@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MyTaskTableViewCell" customModule="TimeTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="403" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="403" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Задача" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Dq-gq-MNp">
+                        <rect key="frame" x="168" y="5" width="67" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Проект" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcf-Oy-bGe">
+                        <rect key="frame" x="175" y="34" width="53" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📅:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l42-5u-BCW">
+                        <rect key="frame" x="5" y="64" width="42" height="51"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0G-7V-ql5">
+                        <rect key="frame" x="52" y="79" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="M0G-7V-ql5" firstAttribute="centerY" secondItem="l42-5u-BCW" secondAttribute="centerY" id="0he-mk-dpB"/>
+                    <constraint firstItem="Vcf-Oy-bGe" firstAttribute="top" secondItem="1Dq-gq-MNp" secondAttribute="bottom" constant="5" id="3hg-m7-fpQ"/>
+                    <constraint firstItem="1Dq-gq-MNp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="4jf-1u-jKZ"/>
+                    <constraint firstItem="M0G-7V-ql5" firstAttribute="leading" secondItem="l42-5u-BCW" secondAttribute="trailing" constant="5" id="JDx-f6-ayS"/>
+                    <constraint firstItem="1Dq-gq-MNp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="L9g-f8-nVm"/>
+                    <constraint firstAttribute="bottom" secondItem="l42-5u-BCW" secondAttribute="bottom" constant="5" id="MnG-Zr-Z4A"/>
+                    <constraint firstItem="l42-5u-BCW" firstAttribute="top" secondItem="Vcf-Oy-bGe" secondAttribute="top" constant="30" id="RcZ-al-MTA"/>
+                    <constraint firstItem="Vcf-Oy-bGe" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="SHU-HF-f3H"/>
+                    <constraint firstItem="l42-5u-BCW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="nZW-nE-o0a"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1Dq-gq-MNp" secondAttribute="trailing" id="z62-Np-lYT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="deadlineLabel" destination="M0G-7V-ql5" id="jya-Tm-c4x"/>
+                <outlet property="projectLabel" destination="Vcf-Oy-bGe" id="H2N-jH-wgd"/>
+                <outlet property="taskLabel" destination="1Dq-gq-MNp" id="74J-EY-IZg"/>
+            </connections>
+            <point key="canvasLocation" x="192.0289855072464" y="152.00892857142856"/>
+        </tableViewCell>
+    </objects>
+</document>
